@@ -22,5 +22,10 @@ class PointTest {
 		System.out.println("upperRight: " + upperRight.x + " " + upperRight.y);
 		System.out.println("middlePoint: " + middlePoint.x + " " + upperRight.y);
 		System.out.println("origin: " + Point.origin.x + " " + Point.origin.y);
+
+		System.out.println("Clearing out middlePoint...");
+		middlePoint.clear();
+		System.out.println("middlePoint: " + middlePoint.x + " " + middlePoint.y);
+
 	}
 }
