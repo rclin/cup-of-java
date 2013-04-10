@@ -31,5 +31,13 @@ class PointTest {
 		middlePoint.clear();
 		System.out.println("middlePoint: " + middlePoint.x + " " + middlePoint.y);
 
+		Point movePoint = new Point();
+		movePoint.move(123.0, 123.0);
+		System.out.println("movePoint: " + movePoint.x + " " + movePoint.y);
+
+		Point updatePoint = new Point();
+		updatePoint.setCoordinates(movePoint);
+		System.out.println("updatePoint: " + updatePoint.x + " " + updatePoint.y);
+
 	}
 }
