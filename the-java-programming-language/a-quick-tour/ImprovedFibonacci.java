@@ -36,7 +36,8 @@ class ImprovedFibonacci {
 	public static void generateFibSequence2() {
 
 		FibThingy[] fibArray = buildFibArray();
-		printFibArray(fibArray);
+		//printFibArray(fibArray);
+		printFibArrayString(fibArray);
 	}
 
 	public static FibThingy[] buildFibArray() {
@@ -75,5 +76,24 @@ class ImprovedFibonacci {
 		}
 
 	}
+
+	// store Strings into array and then print
+	public static void printFibArrayString(FibThingy[] fibArray) {
+
+		String[] strArray = new String[fibArray.length];
+		for (int i = 0; i < fibArray.length; i++) {
+
+			String mark = fibArray[i].isEven ? " *" : "";
+			int index = i+1;
+			String fibLine = index + ": " + fibArray[i].value + mark;
+			strArray[i] = fibLine;
+		}
+
+		for (int i = 0; i < strArray.length; i++) {
+			System.out.println(strArray[i]);
+		}
+
+	}
+
 	
 }
