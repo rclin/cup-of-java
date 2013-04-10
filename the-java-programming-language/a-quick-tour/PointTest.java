@@ -23,6 +23,10 @@ class PointTest {
 		System.out.println("middlePoint: " + middlePoint.x + " " + upperRight.y);
 		System.out.println("origin: " + Point.origin.x + " " + Point.origin.y);
 
+		double d = lowerLeft.distance(upperRight);
+		System.out.println("distance between lowerLeft and upperRight: " + d);
+
+
 		System.out.println("Clearing out middlePoint...");
 		middlePoint.clear();
 		System.out.println("middlePoint: " + middlePoint.x + " " + middlePoint.y);
