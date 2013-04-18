@@ -8,5 +8,8 @@ public class VehicleTest {
 
 		// compile time error if non-static final variable not initialized
 		Vehicle aVehicle = new Vehicle();
+
+		// compile time error since nextID is private
+		//System.out.println(Vehicle.nextID);
 	}
 }
