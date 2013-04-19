@@ -4,10 +4,16 @@ class Body {
 
 	// initializers added to fields
 	public long idNum;
-	public String name = "<unnamed>";
-	public Body orbits = null;
+	public String name;
+	public Body orbits;
 
 	private static long nextID = 0;
+
+	// initialization block - should be used judiciously
+	{
+		name = "<unnamed>";
+		orbits = null;
+	}
 
 	// a default constructor would have same access level as the class
 	// and is created automatically only if no other constructors exist
