@@ -35,6 +35,33 @@ public class Vehicle {
 		System.out.println("v2 id: " + v2.idNum);
 		System.out.println("v2 owner: " + v2.ownerName);
 
+		System.out.println("next ID: " + Vehicle.getNextID());
+		System.out.println(v1);
+		System.out.println(v2);
+		
+		changeName(v2);
+		System.out.println(v2);
+
+		thisDoesNotChangeName(v2);
+		System.out.println(v2);
+	}
+	
+	public static long getNextID() {
+		return nextID;
+	}
+	
+	public String toString() {
+		String desc = idNum + " (" + ownerName + ")";
+		return desc;
 	}
 
+	public static void changeName(Vehicle veh) {
+		veh.ownerName = "Gary";
+	}
+	
+	public static void thisDoesNotChangeName(Vehicle veh) {
+		veh = new Vehicle();
+		veh.ownerName = "Mo";
+	}
+	
 }
