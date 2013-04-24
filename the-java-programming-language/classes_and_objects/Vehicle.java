@@ -44,6 +44,11 @@ public class Vehicle {
 
 		thisDoesNotChangeName(v2);
 		System.out.println(v2);
+		
+		for (int i = 0; i < args.length; i++) {
+			Vehicle veh = new Vehicle(args[i]);
+			System.out.println(veh);
+		}
 	}
 	
 	public static long getNextID() {
@@ -63,5 +68,5 @@ public class Vehicle {
 		veh = new Vehicle();
 		veh.ownerName = "Mo";
 	}
-	
+		
 }
