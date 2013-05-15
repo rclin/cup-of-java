@@ -7,6 +7,10 @@ class ExtendShow extends SuperShow {
 
 	}
 
+	public void foo() {
+		System.out.println("ExtendShow.foo()");
+	}
+
 	public static void main(String[] args) {
 		ExtendShow ext = new ExtendShow();
 		SuperShow sup = ext;
@@ -15,5 +19,7 @@ class ExtendShow extends SuperShow {
 		ext.show();
 		System.out.println("sup.str " + sup.str);
 		System.out.println("ext.str " + ext.str);
+
+		sup.foo();
 	}
 }
