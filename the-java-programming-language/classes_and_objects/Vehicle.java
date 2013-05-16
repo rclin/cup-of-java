@@ -12,6 +12,8 @@ public class Vehicle {
 	// constant variable
 	public final int foo = 3;
 
+	private EnergySource energySrc;
+
 
 	public Vehicle() {
 		idNum = nextID++;
@@ -20,6 +22,19 @@ public class Vehicle {
 	public Vehicle(String ownerName) {
 		this();
 		this.ownerName = ownerName;
+	}
+
+	public Vehicle(String ownerName, EnergySource src) {
+		this(ownerName);
+		this.energySrc = src;
+	}
+
+	public void start() {
+		if (energySrc.empty() == true) {
+			System.out.println("Can't start since energy src is empty");
+		} else {
+			System.out.println("Started");
+		}
 	}
 
 	public static void main(String[] args) {
@@ -49,6 +64,14 @@ public class Vehicle {
 			Vehicle veh = new Vehicle(args[i]);
 			System.out.println(veh);
 		}
+
+		// test energy src
+		Vehicle v3 = new Vehicle ("Greg", new Battery());
+		v3.start();
+
+		Vehicle v4 = new Vehicle ("Judy", new GasTank());
+		v4.start();
+
 	}
 	
 	public static long getNextID() {
