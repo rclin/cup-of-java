@@ -6,6 +6,12 @@ public class ReverseInt {
 		int foo = 123456789;
 
 		System.out.println("Reverse: " + foo + " -> " + reverseInt(foo));
+		foo = 12;
+		System.out.println("Reverse: " + foo + " -> " + reverseInt(foo));
+		foo = 1;
+		System.out.println("Reverse: " + foo + " -> " + reverseInt(foo));
+		foo = 0;
+		System.out.println("Reverse: " + foo + " -> " + reverseInt(foo));
 
 	}
 
