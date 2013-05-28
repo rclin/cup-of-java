@@ -1,4 +1,4 @@
-class Battery extends EnergySource {
+class Battery implements EnergySource {
 
 	private float charge;
 

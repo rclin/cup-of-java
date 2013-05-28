@@ -1,4 +1,4 @@
-abstract class EnergySource {
+interface EnergySource {
 
-	abstract boolean empty();
+	boolean empty();
 }

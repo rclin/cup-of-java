@@ -1,4 +1,4 @@
-class GasTank extends EnergySource {
+class GasTank implements EnergySource {
 
 	private float gallons;
 
