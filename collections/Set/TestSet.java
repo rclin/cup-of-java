@@ -54,6 +54,18 @@ class TestSet {
 		Collection<Person> pIt = new HashSet<Person>();
 		pIt.size();
 
+		System.out.println("pSet size: " + pSet.size());
+		
+		// runtime error
+		//Person[] pArr = (Person[])pSet.toArray();
+		Person[] parr = new Person[pSet.size()];
+		parr = pSet.toArray(parr);
+		System.out.println("parr size: " + parr.length);
+
+		pSet.add(p1);
+		System.out.println("pSet size after add: " + pSet.size());
+		pSet.remove(p1);
+		System.out.println("pSet size after remove: " + pSet.size());
 
 	}
 
