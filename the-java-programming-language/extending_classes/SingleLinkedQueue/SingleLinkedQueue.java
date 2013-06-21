@@ -44,14 +44,16 @@ public class SingleLinkedQueue {
 		System.out.println("singly linked queue");
 
 		SingleLinkedQueue queue = new SingleLinkedQueue();
+		queue.add(new Cell(7));
 		queue.add(1);
 		queue.add(2);
 		queue.add(3);
 		queue.add(4);
 		queue.add(5);
+		queue.add(new Cell(6));
 		System.out.println(queue);
 
-		System.out.println("Removed " + queue.remove());
+		System.out.println("Removed " + (String)queue.remove());
 		System.out.println("Removed " + queue.remove());
 		System.out.println(queue);
 
